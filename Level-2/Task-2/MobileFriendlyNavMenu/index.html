@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-white">Logo</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="nav-item">Home</a>
+                        <a href="#" class="nav-item">About</a>
+                        <a href="#" class="nav-item">Services</a>
+                        <a href="#" class="nav-item">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menuToggle" aria-label="Open menu" class="text-white hover:bg-white hover:text-purple-700 transition-colors duration-300 p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-50 bg-purple-900 bg-opacity-90">
+            <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-white shadow-xl overflow-y-auto">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-2xl font-bold text-purple-700">Logo</span>
+                    <button id="closeMenu" aria-label="Close menu" class="text-purple-700 hover:bg-purple-100 transition-colors duration-300 p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <a href="#" class="mobile-nav-item">Home</a>
+                    <a href="#" class="mobile-nav-item">About</a>
+                    <a href="#" class="mobile-nav-item">Services</a>
+                    <a href="#" class="mobile-nav-item">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@4.1.17/dist/framer-motion.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
