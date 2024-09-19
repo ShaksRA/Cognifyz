@@ -1,0 +1,150 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation styles */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #FDE68A; /* yellow-200 */
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Mobile menu styles */
+#mobileMenu {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+#mobileMenu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Main content styles */
+main {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section styles */
+section {
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styles */
+h2 {
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background: linear-gradient(to right, #9333EA, #EC4899); /* purple-600 to pink-600 */
+}
+
+/* Service list styles */
+#services ul li {
+    transition: all 0.3s ease-in-out;
+}
+
+#services ul li:hover {
+    transform: translateX(10px);
+    color: #6B21A8; /* purple-800 */
+}
+
+#services ul li svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+#services ul li:hover svg {
+    transform: rotate(90deg);
+}
+
+/* Footer styles */
+footer a {
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #services ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility styles */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode styles */
+@media (prefers-contrast: high) {
+    body {
+        background: white;
+        color: black;
+    }
+
+    header, footer {
+        background: black;
+        color: white;
+    }
+
+    a {
+        color: blue;
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline;
+    }
+}

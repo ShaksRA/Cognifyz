@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Responsive Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-purple-100 to-pink-100">
+    <header class="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Vibrant Web</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-yellow-300 transition duration-300 ease-in-out">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-300 transition duration-300 ease-in-out">About</a></li>
+                    <li><a href="#services" class="hover:text-yellow-300 transition duration-300 ease-in-out">Services</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="menuToggle" class="md:hidden text-white hover:text-yellow-300 transition duration-300 ease-in-out" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav id="mobileMenu" class="bg-purple-600 text-white p-4 md:hidden hidden">
+        <ul class="flex flex-col space-y-2">
+            <li><a href="#home" class="block py-2 px-4 hover:bg-purple-700 rounded transition duration-300 ease-in-out">Home</a></li>
+            <li><a href="#about" class="block py-2 px-4 hover:bg-purple-700 rounded transition duration-300 ease-in-out">About</a></li>
+            <li><a href="#services" class="block py-2 px-4 hover:bg-purple-700 rounded transition duration-300 ease-in-out">Services</a></li>
+            <li><a href="#contact" class="block py-2 px-4 hover:bg-purple-700 rounded transition duration-300 ease-in-out">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow container mx-auto p-6">
+        <section id="home" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-purple-800">Welcome to Our Vibrant Website</h2>
+            <p class="text-lg text-gray-700">Experience the power of responsive design with a touch of vibrancy.</p>
+        </section>
+
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-purple-800">About Us</h2>
+            <p class="text-lg text-gray-700">We specialize in creating stunning, responsive web experiences that captivate and engage.</p>
+        </section>
+
+        <section id="services" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-purple-800">Our Services</h2>
+            <ul class="space-y-4">
+                <li class="flex items-center text-lg text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-600 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Web Design
+                </li>
+                <li class="flex items-center text-lg text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-600 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Web Development
+                </li>
+                <li class="flex items-center text-lg text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-600 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    SEO Optimization
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-purple-800">Contact Us</h2>
+            <p class="text-lg text-gray-700">Email: info@vibrantweb.com</p>
+            <p class="text-lg text-gray-700">Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 mt-auto">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Vibrant Web. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-sm hover:text-yellow-300 transition duration-300 ease-in-out mx-2">Privacy Policy</a>
+                <a href="#" class="text-sm hover:text-yellow-300 transition duration-300 ease-in-out mx-2">Terms of Service</a>
+                <a href="#" class="text-sm hover:text-yellow-300 transition duration-300 ease-in-out mx-2">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
